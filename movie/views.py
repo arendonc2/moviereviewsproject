@@ -20,6 +20,10 @@ def home(request):
 def about(request):
     return render(request, 'about.html')
 
+def singup(request):
+    email = request.GET.get('email')
+    return render(request, 'singup.html', {'email':email})
+
 def statistics_view(request): 
     matplotlib.use('Agg') 
     
